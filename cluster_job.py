@@ -404,7 +404,10 @@ if __name__ == '__main__':
         # ---------------------------------------------------------
         # PHASE 2: Parallelized MCMC emcee Sampling
         # ---------------------------------------------------------
-        print(f"--> Initializing MCMC Sampling (Steps: {job['mcmc_steps']}) across {multiprocessing.cpu_count()} cores...")
+        
+        n_workers = multiprocessing.cpu_count()
+        
+        print(f"--> Initializing MCMC Sampling (Steps: {job['mcmc_steps']}) across {n_workers} cores...")
         minim = lmfit.Minimizer(
             Brush_mic, 
             fitted_pars.params, 
