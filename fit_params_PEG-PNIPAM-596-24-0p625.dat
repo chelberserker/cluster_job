@@ -1,51 +1,51 @@
 [[Fit Statistics]]
     # fitting method   = least_squares
-    # function evals   = 225
+    # function evals   = 161
     # data points      = 189
     # variables        = 9
-    chi-square         = 497.730055
-    reduced chi-square = 2.76516697
-    Akaike info crit   = 201.010752
-    Bayesian info crit = 230.186475
+    chi-square         = 373.538335
+    reduced chi-square = 2.07521297
+    Akaike info crit   = 146.760714
+    Bayesian info crit = 175.936438
 [[Variables]]
-    N_agg:        71.7184905 +/- 0.72417251 (1.01%) (init = 20)
-    sigma_N_agg:  0 (fixed)
-    phi_core:     0.52102432 +/- 0.00714187 (1.37%) (init = 0.5)
+    N_agg:        72.1611000 +/- 0.57672285 (0.80%) (init = 40)
+    sigma_N_agg:  5 (fixed)
+    loops:        1 (fixed)
+    d:            0.35169172 +/- 0.00876591 (2.49%) (init = 0.4)
+    phi_core:     0.49023276 +/- 0.00784765 (1.60%) (init = 0.2)
     eps_core:     1 (fixed)
-    alpha_dec:    1.22389860 +/- 0.03709239 (3.03%) (init = 1)
+    alpha_dec:    1.31816358 +/- 0.03590468 (2.72%) (init = 1)
     N_PNIPAM:     632 (fixed)
     N_brush:      576 (fixed)
     sigma:        0.1 (fixed)
-    L0:           0.18315528 +/- 0.00282308 (1.54%) (init = 0.18)
-    b:            51.0874617 +/- 3.37262929 (6.60%) (init = 21.3)
-    R_xs:         2.80335602 +/- 0.02388706 (0.85%) (init = 2.8)
-    loops:        1 (fixed)
-    d:            0.35598953 +/- 0.01134929 (3.19%) (init = 0.8)
-    sigma_R_xs:   0.54102338 +/- 0.02862983 (5.29%) (init = 0.5)
-    bckg:         0.00354219 +/- 1.7854e-05 (0.50%) (init = 0.00346)
+    L0:           0.17895717 +/- 0.00255537 (1.43%) (init = 0.18)
+    b:            55.6513320 +/- 2.69839099 (4.85%) (init = 21.3)
+    R_xs:         2.80064216 +/- 0.02099244 (0.75%) (init = 2.8)
+    sigma_R_xs:   0.54011589 +/- 0.02430663 (4.50%) (init = 0.5)
+    sigma_in:     2 (fixed)
+    bckg:         0.00354208 +/- 1.5474e-05 (0.44%) (init = 0.00346)
     conc:         0.625 (fixed)
     SLD_brush:    0.64 (fixed)
 [[Correlations]] (unreported correlations are < 0.100)
-    C(b, d)                  = -0.9330
-    C(L0, R_xs)              = -0.8514
-    C(R_xs, sigma_R_xs)      = +0.8020
-    C(N_agg, d)              = -0.7525
-    C(N_agg, b)              = +0.7074
-    C(phi_core, L0)          = -0.6717
-    C(alpha_dec, L0)         = -0.5803
-    C(alpha_dec, R_xs)       = +0.5733
-    C(L0, sigma_R_xs)        = -0.5488
-    C(N_agg, alpha_dec)      = +0.5086
-    C(phi_core, R_xs)        = +0.5063
-    C(alpha_dec, sigma_R_xs) = +0.4126
-    C(sigma_R_xs, bckg)      = -0.4108
-    C(phi_core, b)           = -0.3550
-    C(phi_core, sigma_R_xs)  = +0.3176
-    C(N_agg, phi_core)       = -0.2656
-    C(phi_core, d)           = +0.2562
-    C(phi_core, alpha_dec)   = +0.2004
-    C(R_xs, bckg)            = -0.1591
-    C(L0, bckg)              = +0.1386
-    C(L0, d)                 = -0.1261
-    C(N_agg, R_xs)           = +0.1253
-    C(b, R_xs)               = +0.1022
+    C(d, b)                  = -0.9087
+    C(L0, R_xs)              = -0.8749
+    C(R_xs, sigma_R_xs)      = +0.8002
+    C(phi_core, L0)          = -0.7508
+    C(N_agg, d)              = -0.6669
+    C(alpha_dec, L0)         = -0.6288
+    C(phi_core, R_xs)        = +0.6248
+    C(alpha_dec, R_xs)       = +0.6130
+    C(N_agg, alpha_dec)      = +0.6048
+    C(N_agg, b)              = +0.5769
+    C(L0, sigma_R_xs)        = -0.5649
+    C(alpha_dec, sigma_R_xs) = +0.4338
+    C(sigma_R_xs, bckg)      = -0.4106
+    C(phi_core, sigma_R_xs)  = +0.3846
+    C(phi_core, alpha_dec)   = +0.3218
+    C(phi_core, b)           = -0.2716
+    C(R_xs, bckg)            = -0.1602
+    C(L0, b)                 = +0.1510
+    C(L0, bckg)              = +0.1422
+    C(d, alpha_dec)          = -0.1294
+    C(d, L0)                 = -0.1280
+    C(N_agg, R_xs)           = +0.1001
