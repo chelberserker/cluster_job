@@ -37,17 +37,13 @@ print(f"V_mol = {V0:.3f} nm^3")
 # Load Datasets globally so that spawned workers natively inherit them via Linux CoW
 list_of_files = glob('/mnt/data/Brush_SANS/D11_Brush/exp_9-11-2289_252_d11/processed/autostitch/*')
 # NOTE: If directory orders change, replace these indices with exact string paths to avoid mismatches.
-D2O_1mm = D11_SANS(list_of_files[12])
-D2O_2mm = D11_SANS(list_of_files[16])
+D2O_1mm = D11_SANS('./IQ072122_c01.dat')
+D2O_2mm = D11_SANS('./IQ072126_c16.dat')
 
-NIPAM_567_6_0p6 = D11_SANS(list_of_files[15])
-NIPAM_567_6_0p6_40C = D11_SANS(list_of_files[18])
-NIPAM_567_6_2p5 = D11_SANS(list_of_files[14])
-NIPAM_567_6_2p5_40C = D11_SANS(list_of_files[17])
-NIPAM_596_24_0p6 = D11_SANS(list_of_files[35])
-NIPAM_596_24_0p6_40C = D11_SANS(list_of_files[37])
-NIPAM_596_24_1p25 = D11_SANS(list_of_files[34])
-NIPAM_596_24_1p25_40C = D11_SANS(list_of_files[36])
+NIPAM_567_6_0p6_40C = D11_SANS('./IQ072160_c19.dat')
+NIPAM_567_6_2p5_40C = D11_SANS('.IQ072159_c18.dat')
+NIPAM_596_24_0p6_40C = D11_SANS('./IQ072237_c38.dat')
+NIPAM_596_24_1p25_40C = D11_SANS('./IQ072236_c37.dat')
 
 # Shared Beam Profile Generation
 _meas = js.dataArray(np.array([D2O_2mm.q, D2O_2mm.I, D2O_2mm.I_err, D2O_2mm.q_err]))
