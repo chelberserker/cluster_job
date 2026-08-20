@@ -22,8 +22,7 @@ export OPENBLAS_MAIN_FREE=1
 module load mamba
 
 # 3. Activate your Python environment (adjust if using a different environment)
-mamba activate 
-source /home/opid10/refl_ID10/bin/activate
+mamba activate /home/esrf/bersenev/cluster_job/Xray
 
 # 4. Execute the Python script using srun to inherit the exact SBATCH allocations
 srun python3 cluster_job.py
