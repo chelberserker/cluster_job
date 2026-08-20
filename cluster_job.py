@@ -1,7 +1,15 @@
+import os
+
+os.environ["OMP_NUM_THREADS"] = "1"
+os.environ["OPENBLAS_NUM_THREADS"] = "1"
+os.environ["MKL_NUM_THREADS"] = "1"
+os.environ["VECLIB_MAXIMUM_THREADS"] = "1"
+os.environ["NUMEXPR_NUM_THREADS"] = "1"
+os.environ["NUMBA_NUM_THREADS"] = "1"
+
 import h5py
 import numpy as np
 import matplotlib.pyplot as plt
-import os
 import scipy as sc
 import jscatter as js
 import scipy.stats as st
@@ -397,21 +405,21 @@ if __name__ == '__main__':
         # PHASE 2: Parallelized MCMC emcee Sampling
         # ---------------------------------------------------------
         print(f"--> Initializing MCMC Sampling (Steps: {job['mcmc_steps']}) across {multiprocessing.cpu_count()} cores...")
-        
-        res = minimize(
+        minim = lmfit.Minimizer(
             Brush_mic, 
-            args=(q_fit, i_fit, err_fit), 
-            method='emcee', 
-            nan_policy='omit', 
+            fitted_pars.params, 
+            fcn_args=(q_fit, i_fit, err_fit), 
+            nan_policy='omit'
+        )
+        
+        res = minim.emcee(
             burn=1000, 
             steps=job['mcmc_steps'], 
             thin=20, 
-            params=fitted_pars.params, 
             is_weighted=True, 
             progress=True,
-            workers=multiprocessing.cpu_count()  # Built-in Pool generation handled by emcee
-        )
-        
+            workers=n_workers
+        )        
         print("--> Generating Corner Plot...")
         truths = res.params.valuesdict()
         
